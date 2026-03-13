@@ -7,169 +7,220 @@
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
+
   <style>
     .menu-index {
       color: rgb(255, 255, 255) !important;
       opacity: 1 !important;
       font-weight: 700 !important;
     }
-    .widthSet {
-        max-width: 64px;
+
+    .profile-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      margin-bottom: 28px;
     }
 
-    .heightSet {
-        max-height: 64px;
+    .profile-image {
+      width: 180px;
+      min-width: 180px;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
+    .section-title {
+      margin-top: 26px;
+      margin-bottom: 10px;
+    }
+
+    .cv-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    .cv-table td {
+      vertical-align: top;
+      padding: 2px 0 8px 0;
+    }
+
+    .cv-date {
+      width: 220px;
+      white-space: nowrap;
+      padding-right: 24px;
+    }
+
+    .entry-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .entry {
+      line-height: 1.5;
+    }
+
+    .entry p {
+      margin: 0;
+    }
+
+    .note {
+      margin-top: 4px;
+      font-size: 0.95em;
     }
   </style>
 </head>
 
 <body>
   <div class="menu-container"></div>
+
   <div class="content-container">
     <div class="content">
       <div class="content-table flex-column">
-        <div class="flex-row" style="align-items: flex-start;">
-          <div class="flex-item flex-item-stretch flex-column">
-            <img src="img/profile_img.jpg" style="max-width:180px; width:100%; height:auto;" />
+
+        <!-- Profile -->
+        <div class="profile-row">
+          <div class="profile-image">
+            <img src="img/profile_img.jpg" alt="Michelle Bak">
           </div>
-        
-          <div class="flex-item flex-item-stretch-5 flex-column">
+
+          <div class="profile-text">
             <p class="text">
               I study how people interpret health information in digital environments and how AI systems influence health perceptions and behaviors. My research combines behavioral science and human-computer interaction to design and evaluate responsible AI systems that support informed decision-making and sustainable human-AI interaction.
-        
               <br><br>
               <i>Keywords</i>: Responsible AI, Health Communication, Human–AI Interaction, Health Behavior Change, Conversational Agents, Large Language Models
             </p>
           </div>
         </div>
+
         <!-- Appointments -->
-        <h2 class="add-top-margin">Appointments</h2>
-        <table>
+        <h2 class="section-title">Appointments</h2>
+        <table class="cv-table">
           <tr>
-            <td style="width:220px; vertical-align:top;">2026.08 (Expected)</td>
+            <td class="cv-date">2026.08 (Expected)</td>
             <td>
               Assistant Professor, Department of Technology and Society<br>
               State University of New York (SUNY), Korea – Stony Brook University
             </td>
           </tr>
           <tr>
-            <td style="vertical-align:top;">2025.11 - 2026.05</td>
+            <td class="cv-date">2025.11 - 2026.05</td>
             <td>
               Postdoctoral Researcher, Cyber Threat Intelligence Lab<br>
               Hasso Plattner Institute (HPI)
             </td>
           </tr>
         </table>
+
         <!-- Education -->
-        <h2 class="add-top-margin">Education</h2>
-        <table>
+        <h2 class="section-title">Education</h2>
+        <table class="cv-table">
           <tr>
-            <td style="width:220px; vertical-align:top;">2021.09 - 2025.12</td>
+            <td class="cv-date">2021.09 - 2025.12</td>
             <td>
               Ph.D. in Information Sciences, School of Information Sciences<br>
               University of Illinois Urbana-Champaign (UIUC)
             </td>
           </tr>
           <tr>
-            <td style="vertical-align:top;">2016.09 - 2020.03</td>
+            <td class="cv-date">2016.09 - 2020.03</td>
             <td>
               B.A. in Sociology with a minor in Digital Humanities<br>
               University of California, Los Angeles (UCLA)
             </td>
           </tr>
         </table>
-        <!-- Publication -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <br>
-            <h2 style="margin-top: 3px;">Publications</h2>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M., Quan, K., Tomaszewski, T., & Chin, J. (under review). Can Conversational AI Support Ambivalent Users in Changing Their Health Behavior? A Theory-Driven Design of Motivational Dialogue.</div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M., Dörr, C., & Chin, J. (under review). Message Characteristics, Health Beliefs, and Vaccine Risk Perception in Social Media HPV Vaccine Communication.</div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M., & Chin, J. (2024). Examining the Social Dynamics on Health Behavior Promotion in Online Peer Discussions about Breast Cancer Screening. <i>Companion Publication of the 2024 Conference on Computer-Supported Cooperative Work and Social Computing (CSCW Companion '24)</i>. (pp. 472–477). Association for Computing Machinery. <a href="https://doi.org/10.1145/3678884.3681893">https://doi.org/10.1145/3678884.3681893</a></div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M. & Chin, J. (2024). The Potential and Limitations of Large Language Models in Identification of the States of Motivations for Facilitating Health Behavior Change. <i>Journal of the American Medical Informatics Association</i>, <i>31</i>(9), 2047-2053. <a href="https://doi.org/10.1093/jamia/ocae057">https://doi.org/10.1093/jamia/ocae057</a>
-                <br>
-                *a top-tier journal in health informatics; the article has been selected for a competitive special focus issue titled "ChatGPT and Large Language Models (LLMs) in Biomedicine and Health."
-                </div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M., Chin, C. L., & Chin, J. (2024). Use of Health Belief Model-based Deep Learning to Understand Public Health Beliefs in Breast Cancer Screening from Social Media before and during the COVID-19 Pandemic. <i>American Medical Informatics Association (AMIA) Annual Symposium proceedings</i>. (pp. 280–288). AMIA Symposium.</div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M., Chiu, C., & Chin, J. (2023). Mental Health Pandemic during the COVID-19 Outbreak: Social Media as a Window to Public Mental Health. <i>Cyberpsychology, Behavior, and Social Networking</i>, <i>26</i>(5), 346–356. <a href="https://doi.org/10.1089/cyber.2022.0116">https://doi.org/10.1089/cyber.2022.0116</a></div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M., Priniski, J. H., & Chin, J. (2023). Representations of Health and Wellness on Instagram: An Analysis of Posting Behavior of Top-Ranked Health Influencers. In C. Stephanidis, M. Antona, S. Ntoa, & G. Salvendy (Eds.), <i>HCI International 2023 Posters</i> (pp. 10-20). Springer. <a href="https://doi.org/10.1007/978-3-031-36001-5_2">https://doi.org/10.1007/978-3-031-36001-5_2</a></div>
-              </div>
-            </div>
+
+        <!-- Publications -->
+        <h2 class="section-title">Publications</h2>
+        <div class="entry-list">
+
+          <div class="entry">
+            <p><b>Bak</b>, M., Quan, K., Tomaszewski, T., & Chin, J. (under review). Can Conversational AI Support Ambivalent Users in Changing Their Health Behavior? A Theory-Driven Design of Motivational Dialogue.</p>
           </div>
+
+          <div class="entry">
+            <p><b>Bak</b>, M., Dörr, C., & Chin, J. (under review). Message Characteristics, Health Beliefs, and Vaccine Risk Perception in Social Media HPV Vaccine Communication.</p>
+          </div>
+
+          <div class="entry">
+            <p><b>Bak</b>, M., & Chin, J. (2024). Examining the Social Dynamics on Health Behavior Promotion in Online Peer Discussions about Breast Cancer Screening. <i>Companion Publication of the 2024 Conference on Computer-Supported Cooperative Work and Social Computing (CSCW Companion '24)</i> (pp. 472–477). Association for Computing Machinery. <a href="https://doi.org/10.1145/3678884.3681893">https://doi.org/10.1145/3678884.3681893</a></p>
+          </div>
+
+          <div class="entry">
+            <p><b>Bak</b>, M., & Chin, J. (2024). The Potential and Limitations of Large Language Models in Identification of the States of Motivations for Facilitating Health Behavior Change. <i>Journal of the American Medical Informatics Association</i>, <i>31</i>(9), 2047-2053. <a href="https://doi.org/10.1093/jamia/ocae057">https://doi.org/10.1093/jamia/ocae057</a></p>
+            <p class="note">*A top-tier journal in health informatics; the article was selected for a competitive special focus issue titled “ChatGPT and Large Language Models (LLMs) in Biomedicine and Health.”</p>
+          </div>
+
+          <div class="entry">
+            <p><b>Bak</b>, M., Chin, C. L., & Chin, J. (2024). Use of Health Belief Model-based Deep Learning to Understand Public Health Beliefs in Breast Cancer Screening from Social Media before and during the COVID-19 Pandemic. <i>American Medical Informatics Association (AMIA) Annual Symposium Proceedings</i> (pp. 280–288). AMIA Symposium.</p>
+          </div>
+
+          <div class="entry">
+            <p><b>Bak</b>, M., Chiu, C., & Chin, J. (2023). Mental Health Pandemic during the COVID-19 Outbreak: Social Media as a Window to Public Mental Health. <i>Cyberpsychology, Behavior, and Social Networking</i>, <i>26</i>(5), 346–356. <a href="https://doi.org/10.1089/cyber.2022.0116">https://doi.org/10.1089/cyber.2022.0116</a></p>
+          </div>
+
+          <div class="entry">
+            <p><b>Bak</b>, M., Priniski, J. H., & Chin, J. (2023). Representations of Health and Wellness on Instagram: An Analysis of Posting Behavior of Top-Ranked Health Influencers. In C. Stephanidis, M. Antona, S. Ntoa, & G. Salvendy (Eds.), <i>HCI International 2023 Posters</i> (pp. 10–20). Springer. <a href="https://doi.org/10.1007/978-3-031-36001-5_2">https://doi.org/10.1007/978-3-031-36001-5_2</a></p>
+          </div>
+
         </div>
+
         <!-- Presentations -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <br>
-            <h2 style="margin-top: 3px;">Presentations</h2>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M. (2024). <i>Examining the Acceptance and Efficacy of Motivational Interviewing Chatbots (MintBot) on Changes in Health Behavior Intentions</i>. 11th Health Care Engineering Systems Symposium, Peoria, IL.</div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M. (2023). <i>Use of Health Belief Model-based Deep Learning to Understand Public Health Beliefs in Breast Cancer Screening from Social Media during the COVID-19 Pandemic</i>. AMIA Annual Symposium Proceedings, New Orleans, LA.</div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;"><b>Bak</b>, M. (2022). <i>Mental Health Pandemic during the COVID-19 Outbreak: Calls for Help on Social Media</i>. 8th International Conference on Computational Social Science (IC2S2), Chicago, IL. – <b>Honorable Mention Poster Award</b></div>
-              </div>
-            </div>
+        <h2 class="section-title">Presentations</h2>
+        <div class="entry-list">
+          <div class="entry">
+            <p><b>Bak</b>, M. (2024). <i>Examining the Acceptance and Efficacy of Motivational Interviewing Chatbots (MintBot) on Changes in Health Behavior Intentions</i>. 11th Health Care Engineering Systems Symposium, Peoria, IL.</p>
+          </div>
+          <div class="entry">
+            <p><b>Bak</b>, M. (2023). <i>Use of Health Belief Model-based Deep Learning to Understand Public Health Beliefs in Breast Cancer Screening from Social Media during the COVID-19 Pandemic</i>. AMIA Annual Symposium Proceedings, New Orleans, LA.</p>
+          </div>
+          <div class="entry">
+            <p><b>Bak</b>, M. (2022). <i>Mental Health Pandemic during the COVID-19 Outbreak: Calls for Help on Social Media</i>. 8th International Conference on Computational Social Science (IC2S2), Chicago, IL. – <b>Honorable Mention Poster Award</b></p>
           </div>
         </div>
+
         <!-- Teaching -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <br>
-            <h2 style="margin-top: 3px;">Teaching</h2>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-              <div style="display: flex;">                
-                <div style="width: 100%; white-space: normal;">IS 226 Introduction to Human-Computer Interaction, Teaching Assistant (Fall 2024)</div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;">IS 400 iSchool Colloquium, Teaching Assistant (Summer 2024)</div>
-              </div>
-            </div>
+        <h2 class="section-title">Teaching</h2>
+        <div class="entry-list">
+          <div class="entry">
+            <p>IS 226 Introduction to Human-Computer Interaction, Teaching Assistant (Fall 2024)</p>
+          </div>
+          <div class="entry">
+            <p>IS 400 iSchool Colloquium, Teaching Assistant (Summer 2024)</p>
           </div>
         </div>
+
         <!-- Involvement -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <br>
-            <h2 style="margin-top: 3px;">Involvement</h2>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-              <div style="display: flex;">                
-                <div style="width: 100%; white-space: normal;">UIUC Deutschklub (2024.09 - 2025.10)</div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 100%; white-space: normal;">Korean Illinois Women in Soccer (2023.09 - 2025.10)</div>
-              </div>
-              <div style="display: flex;">                
-                <div style="width: 100%; white-space: normal;">Carle Hospice Volunteer (2023.07 - 2025.10)</div>
-              </div>
-            </div>
+        <h2 class="section-title">Involvement</h2>
+        <div class="entry-list">
+          <div class="entry">
+            <p>UIUC Deutschklub (2024.09 - 2025.10)</p>
+          </div>
+          <div class="entry">
+            <p>Korean Illinois Women in Soccer (2023.09 - 2025.10)</p>
+          </div>
+          <div class="entry">
+            <p>Carle Hospice Volunteer (2023.07 - 2025.10)</p>
           </div>
         </div>
+
       </div>
     </div>
-  </div>
   </div>
 </body>
 </html>
