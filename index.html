@@ -7,9 +7,9 @@
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
 
@@ -20,48 +20,70 @@
       font-weight: 700 !important;
     }
 
+    .content-table {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
     .profile-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 28px;
-      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      column-gap: 32px;
+      align-items: stretch;
+      margin-bottom: 34px;
     }
 
     .profile-image {
       width: 180px;
-      min-width: 180px;
+      height: 100%;
+      min-height: 190px;
+      overflow: hidden;
     }
 
     .profile-image img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
     .profile-text {
-      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .profile-text p {
+      margin: 0;
+      line-height: 1.65;
+      font-size: 1.08em;
     }
 
     .section-title {
-      margin-top: 26px;
+      margin-top: 28px;
       margin-bottom: 10px;
+      font-size: 2em;
+      font-weight: 700;
+      color: #2d2d2d;
     }
 
     .cv-table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .cv-table td {
       vertical-align: top;
-      padding: 2px 0 8px 0;
+      padding: 2px 0 10px 0;
+      line-height: 1.5;
     }
 
     .cv-date {
-      width: 220px;
+      width: 230px;
       white-space: nowrap;
-      padding-right: 24px;
+      padding-right: 26px;
+      color: #222;
     }
 
     .entry-list {
@@ -71,7 +93,8 @@
     }
 
     .entry {
-      line-height: 1.5;
+      line-height: 1.55;
+      font-size: 1.02em;
     }
 
     .entry p {
@@ -81,6 +104,44 @@
     .note {
       margin-top: 4px;
       font-size: 0.95em;
+      color: #444;
+    }
+
+    .keywords {
+      margin-top: 18px;
+    }
+
+    .keywords i {
+      font-style: italic;
+    }
+
+    a {
+      word-break: break-word;
+    }
+
+    @media screen and (max-width: 700px) {
+      .profile-row {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+      }
+
+      .profile-image {
+        width: 180px;
+        min-height: auto;
+      }
+
+      .cv-table,
+      .cv-table tbody,
+      .cv-table tr,
+      .cv-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .cv-date {
+        padding-right: 0;
+        margin-bottom: 2px;
+      }
     }
   </style>
 </head>
@@ -95,13 +156,15 @@
         <!-- Profile -->
         <div class="profile-row">
           <div class="profile-image">
-            <img src="img/profile_img.jpg" alt="Michelle Bak">
+            <img src="img/profile_img.jpg" alt="Michelle Chaewon Bak">
           </div>
 
           <div class="profile-text">
-            <p class="text">
+            <p>
               I study how people interpret health information in digital environments and how AI systems influence health perceptions and behaviors. My research combines behavioral science and human-computer interaction to design and evaluate responsible AI systems that support informed decision-making and sustainable human-AI interaction.
-              <br><br>
+            </p>
+
+            <p class="keywords">
               <i>Keywords</i>: Responsible AI, Health Communication, Human–AI Interaction, Health Behavior Change, Conversational Agents, Large Language Models
             </p>
           </div>
@@ -111,14 +174,14 @@
         <h2 class="section-title">Appointments</h2>
         <table class="cv-table">
           <tr>
-            <td class="cv-date">2026.08 (Expected)</td>
+            <td class="cv-date">Starting Aug 2026</td>
             <td>
               Assistant Professor, Department of Technology and Society<br>
               State University of New York (SUNY), Korea – Stony Brook University
             </td>
           </tr>
           <tr>
-            <td class="cv-date">2025.11 - 2026.05</td>
+            <td class="cv-date">2025.11 – 2026.05</td>
             <td>
               Postdoctoral Researcher, Cyber Threat Intelligence Lab<br>
               Hasso Plattner Institute (HPI)
@@ -130,14 +193,14 @@
         <h2 class="section-title">Education</h2>
         <table class="cv-table">
           <tr>
-            <td class="cv-date">2021.09 - 2025.12</td>
+            <td class="cv-date">2021.09 – 2025.12</td>
             <td>
               Ph.D. in Information Sciences, School of Information Sciences<br>
               University of Illinois Urbana-Champaign (UIUC)
             </td>
           </tr>
           <tr>
-            <td class="cv-date">2016.09 - 2020.03</td>
+            <td class="cv-date">2016.09 – 2020.03</td>
             <td>
               B.A. in Sociology with a minor in Digital Humanities<br>
               University of California, Los Angeles (UCLA)
@@ -162,7 +225,7 @@
           </div>
 
           <div class="entry">
-            <p><b>Bak</b>, M., & Chin, J. (2024). The Potential and Limitations of Large Language Models in Identification of the States of Motivations for Facilitating Health Behavior Change. <i>Journal of the American Medical Informatics Association</i>, <i>31</i>(9), 2047-2053. <a href="https://doi.org/10.1093/jamia/ocae057">https://doi.org/10.1093/jamia/ocae057</a></p>
+            <p><b>Bak</b>, M., & Chin, J. (2024). The Potential and Limitations of Large Language Models in Identification of the States of Motivations for Facilitating Health Behavior Change. <i>Journal of the American Medical Informatics Association</i>, <i>31</i>(9), 2047–2053. <a href="https://doi.org/10.1093/jamia/ocae057">https://doi.org/10.1093/jamia/ocae057</a></p>
             <p class="note">*A top-tier journal in health informatics; the article was selected for a competitive special focus issue titled “ChatGPT and Large Language Models (LLMs) in Biomedicine and Health.”</p>
           </div>
 
@@ -209,13 +272,13 @@
         <h2 class="section-title">Involvement</h2>
         <div class="entry-list">
           <div class="entry">
-            <p>UIUC Deutschklub (2024.09 - 2025.10)</p>
+            <p>UIUC Deutschklub (2024.09 – 2025.10)</p>
           </div>
           <div class="entry">
-            <p>Korean Illinois Women in Soccer (2023.09 - 2025.10)</p>
+            <p>Korean Illinois Women in Soccer (2023.09 – 2025.10)</p>
           </div>
           <div class="entry">
-            <p>Carle Hospice Volunteer (2023.07 - 2025.10)</p>
+            <p>Carle Hospice Volunteer (2023.07 – 2025.10)</p>
           </div>
         </div>
 
